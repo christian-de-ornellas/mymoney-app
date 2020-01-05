@@ -6,7 +6,7 @@ class Billing extends Component {
     const {navigation} = this.props;
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Details Screen</Text>
+        <Text>Faturamento</Text>
         <Button title="Home" onPress={() => navigation.navigate('Home')} />
       </View>
     );
