@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import {View, Text, Button} from 'react-native';
 
-class Home extends Component {
+class Billing extends Component {
   render() {
     const {navigation} = this.props;
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Details Screen</Text>
-        <Button
-          title="Faturamento"
-          onPress={() => navigation.navigate('Billing')}
-        />
+        <Button title="Home" onPress={() => navigation.navigate('Home')} />
       </View>
     );
   }
 }
 
-export default Home;
+export default Billing;
