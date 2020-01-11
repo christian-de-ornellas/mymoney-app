@@ -8,11 +8,13 @@ import './config/StatusBarConfig';
 
 import Home from './screens/Home';
 import Billing from './screens/Billing';
+import Expense from './screens/Expense';
 
 const MainNavigator = createStackNavigator(
   {
-    Home: Home,
-    Billing: Billing,
+    Home,
+    Billing,
+    Expense,
   },
   {
     initialRouteName: 'Home',

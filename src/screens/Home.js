@@ -17,6 +17,10 @@ class Home extends Component {
           title="Faturamento"
           onPress={() => navigation.navigate('Billing')}
         />
+        <Button
+          title="Despesas"
+          onPress={() => navigation.navigate('Expense')}
+        />
       </View>
     );
   }
