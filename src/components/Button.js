@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import CommonStyles from '../themes/CommonStyles';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class Button extends Component {
   constructor(props) {
@@ -10,26 +11,29 @@ export default class Button extends Component {
 
   render() {
     return (
-      <View>
+      <TouchableOpacity>
         <Text
-          // eslint-disable-next-line react-native/no-inline-styles
           style={{
+            textAlign: 'center',
             backgroundColor: this.props.background
               ? this.props.background
               : CommonStyles.colors.success,
             color: this.props.color
               ? this.props.color
               : CommonStyles.colors.primary,
-            paddingHorizontal: 12,
-            paddingVertical: 8,
-            borderRadius: 20,
+            paddingHorizontal: 8,
+            paddingVertical: 14,
+            borderRadius: 4,
             fontSize: 20,
+            fontWeight: 'bold',
+            shadowColor: '#000',
+            shadowOffset: {width: 200, height: 100},
           }}
           onPress={this.props.onPress}>
-          {' '}
           {this.props.title}{' '}
+          <Icon name="save" size={20} color={CommonStyles.colors.white} />
         </Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 }

@@ -10,7 +10,13 @@ export default class InputText extends Component {
   render() {
     return (
       <View>
-        <TextInput style={styles.form} placeholder={this.props.placeholder} />
+        <TextInput
+          onChange={this.props.onChangeInput}
+          onSubmitEditing={this.props.onSubmitEditing}
+          style={styles.form}
+          placeholder={this.props.placeholder}
+          value={this.props.value}
+        />
       </View>
     );
   }
